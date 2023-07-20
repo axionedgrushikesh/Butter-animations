@@ -426,6 +426,38 @@ li {
   animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 24s 1 alternate;
 }
 
+.veg-mayo {
+  bottom: 0;
+  /* right: 8px; */
+  transform: translateX(110%);
+  animation: showVegMayo 5s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+}
+
+.hat {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-250%, 0);
+  animation: showHat 12s cubic-bezier(0, 1.17, 1, 1) 29s 1 forwards;
+}
+
+.food-info {
+  animation: food-info 15s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+}
+
+.recipe-btn {
+  padding: 10px 6%;
+  border-radius: 6px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  background-color: #3f318b;
+  color: #fff;
+  text-transform: capitalize;
+  transform: translateX(-100%);
+  white-space: nowrap;
+  animation: showBtn 5s cubic-bezier(0, 1.17, 1, 1) 35s 1 forwards;
+}
 
 
 /* animation starts here */
@@ -498,11 +530,11 @@ li {
     bottom: 35px;
     transform: translateX(-150%);
   }
-  25% {
+  15% {
     bottom: 35px;
     transform: translateX(0);
   }
-  50% {
+  45% {
     bottom: 80px;
     transform: translateX(0);
   }
@@ -557,6 +589,49 @@ li {
   }
 }
 
+@keyframes showVegMayo {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    left: 65%;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 65%;
+    transform: translate(-100%);
+  }
+}
+
+@keyframes showHat {
+  0% {
+    transform: translate(-250%, 0);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+  75% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 60%);
+  }
+}
+
+@keyframes showBtn {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 
 /* animation ends here */
 
