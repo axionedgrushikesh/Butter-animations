@@ -308,9 +308,9 @@ li {
 
 .logo {
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, 30%);
+  transform: translate(-50%, -50%);
 }
 
 .bg-image,
@@ -369,7 +369,7 @@ li {
 .bread {
   position: absolute;
   bottom: 0;
-  transform: translateX(-150%);
+  transform: translateX(-180%);
 }
 
 .veggies {
@@ -383,20 +383,21 @@ li {
 }
 
 .bread {
-  z-index: 1;
+  z-index: 2;
   bottom: 35px;
   left: 12%;
-  animation: breadUp 25s cubic-bezier(0.1, 1, 0, 1) 8s 1 alternate;
+  animation: breadUp 25s cubic-bezier(0.1, .6, 0, 1) 8s 1 alternate;
 }
 
 .knife {
   position: absolute;
+  z-index: 1;
   bottom: 50px;
   left: 15%;
   opacity: 0;
   transform: translateX(0) rotate(300deg);
-  transition: transform 0.4s ease;
-  animation: moveKnife 8s cubic-bezier(0, 0, 0, 2) 15s 1 forwards;
+  transition: transform 0.4s ease-out;
+  animation: moveKnife 8s cubic-bezier(0, 0, 0, 1) 15s 1 forwards;
 }
 
 .mayo {
@@ -426,22 +427,23 @@ li {
 }
 
 .veg-mayo {
+  position: absolute;
   bottom: 0;
   /* right: 8px; */
-  transform: translateX(110%);
+  transform: translateX(250%);
   animation: showVegMayo 5s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
 }
 
 .hat {
   position: absolute;
-  top: 50%;
-  left: 52%;
+  top: 45%;
+  left: 53%;
   transform: translate(-250%, 0);
   animation: showHat 12s cubic-bezier(0, 1.17, 1, 1) 29s 1 forwards;
 }
 
 .food-info {
-  animation: food-info 15s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+  animation: food-info 15s cubic-bezier(0, 1.17, 0, 1) 27s 1 forwards;
 }
 
 .recipe-btn {
@@ -472,13 +474,13 @@ li {
 
 @keyframes active-plate {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
   50% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 
@@ -496,19 +498,19 @@ li {
 
 @keyframes boring-info {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-280%);
   }
   50% {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-280%);
   }
 }
 
 @keyframes sandwich {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(-260%);
   }
   25% {
     transform: translateX(0);
@@ -520,14 +522,14 @@ li {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-290%);
   }
 }
 
 @keyframes breadUp {
   0% {
     bottom: 35px;
-    transform: translateX(-150%);
+    transform: translateX(-280%);
   }
   15% {
     bottom: 35px;
@@ -543,7 +545,7 @@ li {
   }
   100% {
     bottom: 35px;
-    transform: translateX(-150%);
+    transform: translateX(-290%);
   }
 }
 
@@ -554,11 +556,11 @@ li {
   }
   100% {
     opacity: 0;
-    transform: translateX(110%) rotate(300deg);
+    transform: translateX(160%) rotate(300deg);
   }
 }
 
-@keyframes showMayo {
+@keyframes showMayo { 
   0% {
     opacity: 0;
   }
@@ -578,7 +580,7 @@ li {
 
 @keyframes food-info {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-280%);
   }
   50% {
     transform: translateX(-50%);
@@ -593,34 +595,32 @@ li {
     transform: translateX(100%);
   }
   50% {
-    left: 65%;
+    /* left: 65%; */
     transform: translateX(-100%);
   }
   100% {
-    left: 65%;
+    left: 67%;
     transform: translate(-100%);
   }
 }
 
 @keyframes showHat {
   0% {
-    transform: translate(-250%, 0);
+    transform: translate(-270%, 0);
   }
   50% {
     transform: translate(-50%, 0);
   }
-  75% {
-    transform: translate(-50%, 0);
-  }
   100% {
-    transform: translate(-50%, 60%);
+    transform: translate(-50%, 50%);
   }
 }
 
 @keyframes showBtn {
   0% {
+    top: 0;
     left: 0;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   50% {
     left: 50%;
