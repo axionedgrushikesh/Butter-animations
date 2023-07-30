@@ -345,7 +345,7 @@ li {
   color: #c2314a;
   font-size: 30px;
   text-align: center;
-  transform: translateX(-200%);
+  transform: translateX(-300%);
 }
 
 .person-img {
@@ -438,7 +438,7 @@ li {
   position: absolute;
   top: 45%;
   left: 53%;
-  transform: translate(-250%, 0);
+  transform: translate(-350%, 0);
   animation: showHat 12s cubic-bezier(0, 1.17, 1, 1) 29s 1 forwards;
 }
 
@@ -498,13 +498,13 @@ li {
 
 @keyframes boring-info {
   0% {
-    transform: translateX(-280%);
+    transform: translateX(-300%);
   }
   50% {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-280%);
+    transform: translateX(-300%);
   }
 }
 
